@@ -15,9 +15,9 @@ use App\Http\Controllers\TweetController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/index', [TweetController::class, 'index'])->name('tweets.index');
 
