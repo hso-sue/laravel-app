@@ -20,6 +20,9 @@ use App\Http\Controllers\TweetController;
 // });
 
 Route::get('/index', [TweetController::class, 'index'])->name('tweets.index');
+Route::get('/create', [TweetController::class, 'create'])->name('tweets.create');
+Route::get('/store', [TweetController::class, 'store'])->name('tweets.store');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

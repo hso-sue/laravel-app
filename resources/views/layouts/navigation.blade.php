@@ -45,6 +45,18 @@
                 </x-dropdown>
             </div>
             @endauth
+            @guest
+                <div class="sm:flex sm:items-center sm:ml-6">
+                @if (Route::has('login'))
+                <div align="right" width="48">
+                    <a href="{{ route('login') }}" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">ログイン</a>
+
+                    @if (Route::has('register'))
+                        <a href="{{ route('register') }}" class="ml-4 text-gray-600 hover:text-gray-900 dark:text-gray-400 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">新規登録</a>
+                    @endif
+                </div>
+                @endif
+            @endguest
 
             <!-- Hamburger -->
             <div class="-mr-2 flex items-center sm:hidden">
